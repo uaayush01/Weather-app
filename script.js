@@ -85,7 +85,7 @@ locationButton.addEventListener("click",()=>{
     navigator.geolocation.getCurrentPosition(position=>{
         console.log(position)
         const {latitude ,longitude } =position.coords
-        const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${latitude},${latitude}&days=2`;
+        const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${latitude},${latitude}&days=2`;
         getWeatherDetails(API_URL)
     },error=>{
             alert("Location access denied. Please enable permission to use this feature.")
